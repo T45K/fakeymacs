@@ -137,16 +137,7 @@ def configure(keymap):
 
     # Emacs のキーバインドに“したくない”アプリケーションソフトを指定する
     # （Keyhac のメニューから「内部ログ」を ON にすると processname や classname を確認することができます）
-    not_emacs_target     = ["bash.exe",            # WSL
-                            "ubuntu.exe",          # WSL
-                            "ubuntu1604.exe",      # WSL
-                            "ubuntu1804.exe",      # WSL
-                            "SLES-12.exe",         # WSL
-                            "openSUSE-42.exe",     # WSL
-                            "debian.exe",          # WSL
-                            "kali.exe",            # WSL
-                            "WindowsTerminal.exe", # Windows Terminal
-                            "mintty.exe",          # mintty
+    not_emacs_target     = ["mintty.exe",          # mintty
                             "Cmder.exe",           # Cmder
                             "ConEmu.exe",          # ConEmu
                             "ConEmu64.exe",        # ConEmu
@@ -154,7 +145,6 @@ def configure(keymap):
                             "emacs-X11.exe",       # Emacs
                             "emacs-w32.exe",       # Emacs
                             "gvim.exe",            # GVim
-                            "Code.exe",            # VSCode
                             "xyzzy.exe",           # xyzzy
                             "VirtualBox.exe",      # VirtualBox
                             "XWin.exe",            # Cygwin/X
@@ -170,21 +160,11 @@ def configure(keymap):
 
     # IME の切り替え“のみをしたい”アプリケーションソフトを指定する
     # （指定できるアプリケーションソフトは、not_emacs_target で（除外）指定したものからのみとなります）
-    ime_target           = ["bash.exe",            # WSL
-                            "ubuntu.exe",          # WSL
-                            "ubuntu1604.exe",      # WSL
-                            "ubuntu1804.exe",      # WSL
-                            "SLES-12.exe",         # WSL
-                            "openSUSE-42.exe",     # WSL
-                            "debian.exe",          # WSL
-                            "kali.exe",            # WSL
-                            "WindowsTerminal.exe", # Windows Terminal
-                            "mintty.exe",          # mintty
+    ime_target           = ["mintty.exe",          # mintty
                             "Cmder.exe",           # Cmder
                             "ConEmu.exe",          # ConEmu
                             "ConEmu64.exe",        # ConEmu
                             "gvim.exe",            # GVim
-                            "Code.exe",            # VSCode
                             "xyzzy.exe",           # xyzzy
                             "putty.exe",           # PuTTY
                             "ttermpro.exe",        # TeraTerm
@@ -197,34 +177,34 @@ def configure(keymap):
     is_japanese_keyboard = True
 
     # 左右どちらの Ctrlキーを使うかを指定する（"L": 左、"R": 右）
-    side_of_ctrl_key = "L"
+    side_of_ctrl_key = "R"
 
     # 左右どちらの Altキーを使うかを指定する（"L": 左、"R": 右）
     side_of_alt_key = "L"
 
     # Emacs日本語入力モードを使うかどうかを指定する（True: 使う、False: 使わない）
-    use_emacs_ime_mode = True
+    use_emacs_ime_mode = False
 
     # Emacs日本語入力モードを切り替える（トグルする）キーを指定する
-    # toggle_emacs_ime_mode_key = None
-    toggle_emacs_ime_mode_key = "C-t"
+    toggle_emacs_ime_mode_key = None
+    # toggle_emacs_ime_mode_key = "C-t"
 
     # Emacs日本語入力モードが有効なときに表示するバルーンメッセージを指定する
-    # emacs_ime_mode_balloon_message = None
-    emacs_ime_mode_balloon_message = "▲"
+    emacs_ime_mode_balloon_message = None
+    # emacs_ime_mode_balloon_message = "▲"
 
     # Emacsシフトモードを使うかどうかを指定する（True: 使う、False: 使わない）
     use_emacs_shift_mode = False
 
     # IME を切り替えるキーを指定する（複数指定可）
     # toggle_input_method_key = ["C-Yen"]
-    toggle_input_method_key = ["C-Yen", "C-o"]
+    toggle_input_method_key = []
 
     # C-iキーを Tabキーとして使うかどうかを指定する（True: 使う、False: 使わない）
     use_ctrl_i_as_tab = True
 
     # Escキーを Metaキーとして使うかどうかを指定する（True: 使う、False: 使わない）
-    use_esc_as_meta = True
+    use_esc_as_meta = False
 
     # Ctl-xプレフィックスキーに使うキーを指定する
     # （Ctl-xプレフィックスキーのモディファイアキーは、Ctrl または Alt のいずれかから指定してください）
